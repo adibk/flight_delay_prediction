@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Alou Jet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="fixed-menu">
+        <div class="logo" href="">
+            <img src="{% static 'img/logo.svg' %}" alt="Logo">
+            <a href="/">
+            <span>AJ</span>
+            </a>
+        </div>
+        <ul>
+            <li><a href="#section2">Prediction</a></li>
+            <li><a href="#section3">Process</a></li>
+            <li><a href="#section4">Visulization</a></li>
+            <li><a href="#section5">Team</a></li>
+            <li><button type="submit" class="btn loginBtn">Log In</button></li>
+            <li><button type="submit" class="btn signupBtn">Sign up</button></li>
+            <li class="lang-dropdown dropdown-toggle" id="navbarDropdown" role="button">
+                <a><img src="{% static 'img/en.svg' %}" alt="en" width="20" height="20"></a>
+                <span class="arrow">&#9662;</span> 
+            </li>
+        </ul>
+    </nav>
+    <div class="section" id="section1">
+        <div class="background-video-container">
+            <video autoplay muted loop class="background-video">
+                <source src="{% static 'video/clouds.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <div class="landing-page">
+            <h1>Alou Jet</h1>
+            <h1>Predict the Future</h1>
+            <p>Predict Flight Delays with Ease</p>
+            <div>
+                <ul>
+                <li><a href="#section2"><button type="submit" class="btn try-btn">Try a prediction</button></a></li>
+                <li><a href="#section5"><button type="submit" class="btn">Learn more</button></a></li>
+                </ul>
+            </div>
+            <!-- <h2>Empowering travelers and businesses with advanced AI predictions.</h2> -->
+            <!-- <p>Using cutting-edge technology, our app provides reliable predictions on flight delays, helping you plan better and avoid inconveniences.</p> -->
+        </div>
+        <img id="landing-page-logo" src="{% static 'img/logo_stroke.svg' %}" alt="Logo">
+    </div>
+    <div class="section" id="section2">
+        <div class="background-video-container">
+            <video autoplay muted loop class="background-video">
+                <source src="{% static 'video/earth_timelapse.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <h1>Section 2</h1>
+    </div>
+    <div class="section" id="section3">
+        <div class="background-video-container">
+            <video autoplay muted loop class="background-video">
+                <source src="{% static 'video/earth_timelapse.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <h1>Section 3</h1>
+    </div>
+    <div class="section" id="section4">
+        <div class="background-video-container">
+            <video autoplay muted loop class="background-video">
+                <source src="{% static 'video/earth_timelapse.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <h1>Section 4</h1>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
