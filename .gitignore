@@ -54,9 +54,13 @@ csv/
 
 # Media files
 media/
+video/
+videos/
 
 # Static files
 static/
+img/
+imgs/
 
 # pyenv
 .python-version
@@ -118,3 +122,4 @@ yarn-error.log* data/csv
 # Project Specific
 !data 
 !static/
+!img/
