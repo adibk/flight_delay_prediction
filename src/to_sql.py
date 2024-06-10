@@ -50,7 +50,7 @@ def show_databases(connection):
         databases = cursor.fetchall()
         print("Databases:")
         for database in databases:
-            print(database[0])  # Print the database name
+            print(database[0])  
     except Error as e:
         print("Error executing SHOW DATABASES command", e)
 
@@ -58,7 +58,7 @@ def execute_query(connection, cursor, query, params=None):
     try:
         cursor.execute(query, params)
         if query.strip().lower().startswith('select') or query.strip().lower().startswith('show'):
-            result = cursor.fetchall()  # Ensure all results are fetched
+            result = cursor.fetchall()
             return result
         else:
             connection.commit()
@@ -185,7 +185,7 @@ column_types = {
     'state_ID': 'VARCHAR(2)' 
 }
 foreign_keys = {
-    'state_ID': 'states(abr)'  # state_ID references states(state_ID)
+    'state_ID': 'states(abr)' 
 }
 table_name = "airport"
 create_table_from_dataframe(con, table_name, df_airport, column_types, foreign_keys)
@@ -264,7 +264,12 @@ table_name = "delay"
 create_table_from_dataframe(con, table_name, df_delay, column_types, smallint=True)
 insert_dataframe_to_table(con, table_name, df_delay)
 
-
+add_foreign_key_query = """
+ALTER TABLE flight
+ADD CONSTRAINT fk_delay_id
+FOREIGN KEY (ID) REFERENCES delay(ID);
+"""
+execute_query(con, cur, add_foreign_key_query)
 
 
 
