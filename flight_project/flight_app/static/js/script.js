@@ -51,4 +51,5 @@ document.addEventListener("DOMContentLoaded", function() {
     const menuLinks = document.querySelectorAll('.fixed-menu a');
     menuLinks.forEach(link => link.addEventListener('click', handleMenuClick));
     
+    
 });
