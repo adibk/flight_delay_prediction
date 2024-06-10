@@ -20,7 +20,6 @@ body {
     height: 100%;
     overflow: hidden;
     z-index: -1;
-    /* Ensure the video is behind the content */
     /* display: none; */
 }
 
@@ -28,10 +27,8 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Ensure the video covers the entire area */
     /* display: none; */
     z-index: -1;
-    /* Ensure the video is behind the content */
 
 }
 
@@ -69,7 +66,6 @@ body {
 
 .fixed-menu .logo img {
     height: 45px;
-    /* Adjust the size as needed */
 }
 
 .fixed-menu ul {
@@ -101,12 +97,9 @@ body {
     scroll-snap-align: start;
     font-size: 2em;
     padding-top: 50px;
-    /* Adjust if needed to avoid overlap with the fixed menu */
     box-sizing: border-box;
     color: #FFF;
-    /* Ensure text is readable on the video background */
     /* text-shadow: 1px 1px 2px black; */
-    /* Optional: Add text shadow for better readability */
 }
 
 #section1 {
@@ -115,15 +108,110 @@ body {
 }
 
 #section2 {
-    background-color: rgba(70, 130, 180, 0.5);
-    /* Optional: Semi-transparent background for better readability */
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 132, 0, 0.05));
+    /* background-color: rgba(70, 130, 180, 0.5);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 132, 0, 0.05)); */
+    background-color: #e66500;
+    padding-top: 0px;
+}
 
+#section2 .content {
+    background-color: #fff;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* padding-top: 45px; */
+    color: #FF7000;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+}
+#mapid {
+    display: none;
+}
+
+#map-container {
+    padding-top: 65px;
+    width: 100%;
+    background: rgb(37, 17, 0);
+}
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
+    /* border-radius: 5px; */
+}
+
+.card-body {
+    /* background-color: rgba(255, 139, 51, 0.106); */
+    background-image: linear-gradient(to bottom, rgba(255, 139, 51, 0.106), #ffffff);
+
+    font-size: 0.8em;
+    height: 150px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding: 40px;
+}
+
+.card-body .btn {
+    margin-left: 15px;
+    position: relative;
+    top: -5px;
+}
+
+.form-floating input {
+    border: 1px solid rgba(255, 139, 51, 0.106);
+    position: relative;
+    top: -5px;
+    padding: 4px;
+    padding-left: 8px;
+    border-radius: 4px;
+    width: 200px;
+    height: 25px;
+    margin: 0 8px;
+    box-shadow: none;
+    outline: none;
+    color: #632b00;
+}
+.form-floating input:focus, .form-floating input:active {
+    /* border: 2px solid #ff8d33 !important; */
+    box-shadow: inset 0 0 0 2px #ff8d33 !important;
+
+    box-shadow: none;
+    outline: none;
+}
+.prediction-result {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #ff8d33;
+}
+
+
+.form-floating {
+    display: inline !important;
+}
+.text-center {
+    display: inline !important;
+}
+
+h6 {
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+#map-id {
+    display: none;
 }
 
 #section3 {
-    background-color: rgba(50, 205, 50, 0.5);
-    /* Optional: Semi-transparent background for better readability */
+    background-color: white;
 }
 
 .btn {
